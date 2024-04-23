@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="/static/styles.css" rel="stylesheet">
+    <title>Mypage</title>
+    <style>
+		h2 { text-align: left; }
+	</style>
+</head>
+<body>
+    <div class="header">
+        <h1>홈페이지 헤더</h1>
+    </div>
+
+    <div class="container">
+        <div class="section">
+
+            <h2>즐겨찾기</h2>
+            <table>
+                <colgroup>
+                    <col width="200px" />
+                    <col width="300px" />
+                    <col width="100px" />
+                </colgroup> 
+                <thead>
+                    <tr>
+                        <th>식당 이름</th>
+                        <th>식당 주소</th>
+                        <th>별점</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- {% for bookmark in bookmarks %} -->
+                    <tr>
+                        <!-- <td> {{ bookmark.restaurant_id }} </td>
+                        <td> {{ bookmark.restaurant_address }}</td>
+                        <td> {{ bookmark.restaurant_score / 5.0 }} </td> -->
+                    </tr>
+                    <!-- {% endfor %} -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+
+            <h2>내가 쓴 리뷰</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>리뷰내용</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- DB에서 가져온 본인 리뷰들을 보여주기 -->
+                    <!-- 위의 주석을 해제해서 사용해주시면 될거 같습니다 
+                         에러 발생을 막기위해 주석을 사용하였습니다 -->
+
+                    <!-- {% for review in reviews %}
+                    <tr>
+                        <td> {{ review }} </td>
+                    </tr>
+                    {% endfor %} -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<!-- <td> {{ birthday.month }}/{{ birthday.day }} </td> -->
