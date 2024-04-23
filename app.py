@@ -83,10 +83,12 @@ def register():
             if user_password_1 == user_password_2:# password1 , password2 가 다르다면 에러 발생
                hash_password = generate_password_hash(user_password_1) # password1 password2 가 같다면 password 를 해시값으로 변경함
                db.execute("insert into user (name, user_id, password) values (?,?,?)", user_name,user_id,hash_password) # db에 집어넣음
+               print(user_name)
+               return render_template("index.html")
             else:
-                return render_template("different password!!!!!!!")
+                return render_template("register.html")
         else:
-            return render_template("no empty!!!!!!!!!!!")       
+            return render_template("register.html")       
     else:
         return render_template("register.html")
 
