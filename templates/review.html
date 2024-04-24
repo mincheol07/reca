@@ -132,23 +132,25 @@
     </div>
 
     <div class = review style="height: auto; width: 500px; padding-left: 400px; padding-top: 200px; float: left;">
-
-    <div class="star-rating">
-        <input type="radio" id="5-stars" name="rating" value="5" />
-        <label for="5-stars" class="star">&#9733;</label>
-        <input type="radio" id="4-stars" name="rating" value="4" />
-        <label for="4-stars" class="star">&#9733;</label>
-        <input type="radio" id="3-stars" name="rating" value="3" />
-        <label for="3-stars" class="star">&#9733;</label>
-        <input type="radio" id="2-stars" name="rating" value="2" />
-        <label for="2-stars" class="star">&#9733;</label>
-        <input type="radio" id="1-star" name="rating" value="1" />
-        <label for="1-star" class="star">&#9733;</label>
-      </div>
       
-      <textarea class="review_box" placeholder="리뷰 내용을 작성해주세요." ></textarea>
+    <form action="POST">
+      <div class="star-rating">
+          <input type="radio" id="5-stars" name="rating" value="5" />
+          <label for="5-stars" class="star">&#9733;</label>
+          <input type="radio" id="4-stars" name="rating" value="4" />
+          <label for="4-stars" class="star">&#9733;</label>
+          <input type="radio" id="3-stars" name="rating" value="3" />
+          <label for="3-stars" class="star">&#9733;</label>
+          <input type="radio" id="2-stars" name="rating" value="2" />
+          <label for="2-stars" class="star">&#9733;</label>
+          <input type="radio" id="1-star" name="rating" value="1" />
+          <label for="1-star" class="star">&#9733;</label>
+        </div>
       
-      <input type="submit" class="btn_review" value="리뷰 등록"/>
-      </div>
+        <input class="review_box" placeholder="리뷰 내용을 작성해주세요." ></input>
+      
+        <button type="submit" class="btn_review" value="리뷰 등록"></button>
+    </form>   
+  </div>
 </body>
 </html>
