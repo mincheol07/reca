@@ -66,11 +66,11 @@ def login():
         return render_template("login.html")
     
 
-        # db.execute("insert")
-        # return render_template("login.html")
+# db.execute("insert")
+# return render_template("login.html")
 
-#db.execute("insert")
-#return render_template("login.html")
+        #db.execute("insert")
+        #return render_template("login.html")
 
 
 
