@@ -65,13 +65,13 @@ def login():
     else:
         return render_template("login.html")
     
-<<<<<<< HEAD
+
         # db.execute("insert")
         # return render_template("login.html")
-=======
+
 #db.execute("insert")
 #return render_template("login.html")
->>>>>>> origin/master
+
 
 
 # 회원가입 로직
