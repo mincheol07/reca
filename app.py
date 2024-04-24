@@ -49,10 +49,9 @@ def login():
         rows = db.execute(
             "SELECT * FROM user WHERE user_id = ?", request.form.get("user_id")
         )
-
         # 해시 확인해서 맞으면 로그인 ㄱㄱ
         if len(rows) != 1 or not check_password_hash(
-            rows[0]["hash"], request.form.get("password")
+            rows[0]["password"], request.form.get("password")
         ):
             return render_template("error.html")
 
@@ -66,9 +65,9 @@ def login():
     else:
         return render_template("login.html")
     
-#db.execute("insert")
-#return render_template("login.html")
 
+# db.execute("insert")
+# return render_template("login.html")
 
 # 회원가입 로직
 @app.route("/register", methods = ["GET", "POST"])
@@ -93,3 +92,12 @@ def register():
         return render_template("register.html")
 
 
+
+
+@app.route("/review", methods = ["GET", "POST"])
+def review():
+    review_input = request.form.get("review_input")
+    rating = request.form.get("rating")
+    
+    
+    return render_template("review.html")
