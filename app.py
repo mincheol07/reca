@@ -65,9 +65,9 @@ def login():
     else:
         return render_template("login.html")
     
-        # db.execute("insert")
-        # return render_template("login.html")
 
+# db.execute("insert")
+# return render_template("login.html")
 
 # 회원가입 로직
 @app.route("/register", methods = ["GET", "POST"])
