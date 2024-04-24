@@ -9,48 +9,48 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
         <style>
     * {
-    box-sizing: border-box;
-    }
-    
-    body {
-    font-family: Arial, Helvetica, sans-serif;
-    }
-    
-    /* Style the header */
-    .header {
-    font-size: 20px;
-    }
-    
-    /* Create three equal columns that floats next to each other */
-    .column {
-    float: left;
-    width: 33.33%;
-    padding: 10px;
-    }
-    
-    /* Clear floats after the columns */
-    .row:after {
-    content: "";
-    display: table;
-    clear: both;
-    }
-    
-    /* Style the footer */
-    .footer {
-    background-color: #f1f1f1;
-    padding: 10px;
-    text-align: center;
-    }
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+.header {
+font-size: 20px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+float: left;
+width: 33.33%;
+padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+/* Style the footer */
+.footer {
+background-color: #f1f1f1;
+padding: 10px;
+text-align: center;
+}
     
     /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-    @media (max-width: 600px) {
-    .column {
-        width: 100%;
+@media (max-width: 600px) {
+.column {
+    width: 100%;
     }
-    .navbar {
-        position: fixed;
-        top: 0;
-        width: 100%; 
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%; 
     }
 .navbar-brand.blue
 {
@@ -69,8 +69,7 @@
     color: #2e944b;
 }
 
-
-    }
+}
         </style>
     </head>
     
@@ -85,10 +84,10 @@
           <div class="collapse navbar-collapse" id="navbar">
               {% if session["user_id"] %}
                   <ul class="navbar-nav me-auto mt-2">
-                      <li class="nav-item"><a class="nav-link" href="/quote">Quote</a></li>
-                      <li class="nav-item"><a class="nav-link" href="/buy">Buy</a></li>
-                      <li class="nav-item"><a class="nav-link" href="/sell">Sell</a></li>
-                      <li class="nav-item"><a class="nav-link" href="/history">History</a></li>
+                      <li class="nav-item"><a class="nav-link" href="./review">리뷰작성</a></li>
+                      <li class="nav-item"><a class="nav-link" href="./register">신규 회원가입</a></li>
+                      <li class="nav-item"><a class="nav-link" href="./mypage">마이페이지</a></li>
+                      <li class="nav-item"><a class="nav-link" href="./bookmark">북마크</a></li>
                   </ul>
                   <ul class="navbar-nav ms-auto mt-2">
                       <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
@@ -103,84 +102,141 @@
       </div>
   </nav>
     
-          <div class="container">
-            <div class="section">
-              <div class="row">
-                  <div class="column">
-                    <div class="card" style="width: 18rem;">
-                      <img src="../picture/소유라멘.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                    </div>
-                  </div>
+    <div class="container">
+    <div class="section">
+    <div class="row">
+    <div class="column">
+    <div class="card" style="width: 18rem;" >
+    <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190201_168%2F15490248097263GDHL_JPEG%2FTcFi25obZqaiioNrQKuo8q-Q.jpeg.jpg" style="min-height: 21em;" class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title">이태리부대찌개 학동역점</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <form action="/" method="post"><button type="submit" class="btn btn-primary" value="1" name="btn">Review</button></form>
+    </div>
+    </div>
+    </div>
 
-                  <div class="column">
-                    <div class="card" style="width: 18rem;">
-                      <img src="../picture/소유라멘.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                    </div>
-                  </div>
+    <div class="column">
+    <div class="card" style="width: 18rem;" >
+    <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMzExMDNfNzkg%2FMDAxNjk4OTg3OTIyNzY2._ujiDPpNLel5BciHYfZgHVWHXsm6_O-05Ce7-TYrEFcg.2nsSyZ1XaeEZSluAmAhZkF-dTsBjmrcbbWLoh-hvWbIg.JPEG%2FF58A5FA4-B6E5-4841-A83F-7FA428307BE3.jpeg%3Ftype%3Dw1500_60_sharpen" style="min-height: 21em;" class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title">마부 육전</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <form action="/" method="post"><button type="submit" class="btn btn-primary" value="2" name="btn">Review</button></form>
+    </div>
+    </div>
+    </div>
 
-                  <div class="column">
-                    <div class="card" style="width: 18rem;">
-                      <img src="../picture/소유라멘.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                    </div>
-                  </div>
 
-                  <div class="column">
-                    <div class="card" style="width: 18rem;">
-                      <img src="../picture/소유라멘.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                    </div>
-                  </div>
 
-                  <div class="column">
-                    <div class="card" style="width: 18rem;">
-                      <img src="../picture/시오라멘.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                    </div>
-                  </div>
+    <div class="column">
+    <div class="card" style="width: 18rem;" >
+    <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20221129_75%2F1669696005696zwj85_JPEG%2F%25B6%25C7%25B6%25EC%25BE%25C61.jpg" style="min-height: 21em;"  class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title">류몽민 학동역점</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <form action="/" method="post"><button type="submit" class="btn btn-primary" value="3" name="btn">Review</button></form>
+    </div>
+    </div>
+    </div>
 
-                  <div class="column">
-                    <div class="card" style="width: 18rem;">
-                      <img src="../picture/소유라멘.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                    </div>
-                  </div>
+    <div class="column">
+    <div class="card" style="width: 18rem;" >
+    <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMzA2MjRfMTgy%2FMDAxNjg3NjEzOTM2OTEx.7S05Ii7OpsL1tf7tkslRZizl0LV7jhj-afLA8uOdvvYg.vIWNBUHWW7QmZ_1kXFKOzomtyC5efDAS3ngcaAyviJ8g.JPEG%2F20230622_190811.jpg%3Ftype%3Dw1500_60_sharpen" style="min-height: 21em;"  class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title">치킨 더비</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <form action="/" method="post"><button type="submit" class="btn btn-primary" value="4" name="btn">Review</button></form>
+    </div>
+    </div>
+    </div>
 
-                </div>
-              </div>
-            </div>
-          </div>
-       
+    <div class="column">
+    <div class="card" style="width: 18rem;" >
+    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA5MDZfMTEy%2FMDAxNjkzOTc5NjYwOTE3.FsaYecKmdNMgkp5ZKCDNDQm0eL8KTAlsf0S2PHUrVEUg.amjEzuXznxplUwRWyhdYScD-mcOCVBLsRWoPA7MRvd4g.JPEG.onute9400%2FIMG_3222.jpg"  style="min-height: 21em;"  class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title">싸다김밥 학동역점</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <form action="/" method="post"><button type="submit" class="btn btn-primary" value="5" name="btn">Review</button></form>
+    </div>
+    </div>
+    </div>
+
+    <div class="column">
+    <div class="card" style="width: 18rem;" >
+    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAzMjBfNTYg%2FMDAxNzEwOTAxMzkyNjc5.sQcJhcmiauQE5_7r9OolUevZDt3So1hBDnhLdee-U_Mg.rrFfMq04ZxKbtvv-X-Ey1MhHjWbywsGpFbe64zwBra0g.JPEG%2FIMG_2955.jpg
+    "  style="min-height: 21em;" class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title">박실장 떡볶이</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <form action="/" method="post"><button type="submit" class="btn btn-primary" value="6" name="btn">Review</button></form>
+    </div>
+    </div>
+    </div>
+
+    <div class="column">
+    <div class="card" style="width: 18rem;" >
+    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzExMjlfNzQg%2FMDAxNzAxMjM5MTU3NTc2.oZXZ-6J-uQt2IXF7OcxAgBtR1mX0NzbVwpFB6_r6svYg.vkdEcRPEyXj49AUJ0jx7tekzooSw6wdeFcx5-vxa_xwg.JPEG.97kjh%2FIMG_9822.jpg
+    " style="min-height: 21em;" class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title">다옴분식 학동점</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <form action="/" method="post"><button type="submit" class="btn btn-primary" value="7" name="btn">Review</button></form>
+    </div>
+    </div>
+    </div>
+
+    <div class="column">
+    <div class="card" style="width: 18rem;" >
+    <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231106_79%2F1699256626585X0X2v_JPEG%2F%25C7%25C3%25B7%25B9%25C0%25CC%25BD%25BA2.jpg"  style="min-height: 21em;"  class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title">동경규동 학동점</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <form action="/" method="post"><button type="submit" class="btn btn-primary" value="8" name="btn">Review</button></form>
+    </div>
+    </div>
+    </div>
+
+    <div class="column">
+    <div class="card" style="width: 18rem;" >
+    <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240216_25%2F1708075435057Y7nBi_JPEG%2FKakaoTalk_20231227_160318135.jpg" style="min-height: 21em;"  class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title">카츠공방 학동역점</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <form action="/" method="post"><button type="submit" class="btn btn-primary" value="9" name="btn">Review</button></form>
+    </div>
+    </div>
+    </div>
+
+    <div class="column">
+    <div class="card" style="width: 18rem;" >
+    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAxMjJfMTYw%2FMDAxNzA1ODkwNTY3OTA4.-njblkDPt7tDKqcp3LEe4xVjc-RJqE9F-4dcZsIOFTEg.VcKIVGuKc--ieOYwhguSy8RB9ehR2KOIxNHw6idOfYAg.JPEG.7073879%2F20231016_122056.jpg"  style="min-height: 21em;"  class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title">코마츠 (Recommend!)</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <form action="/" method="post"><button type="submit" class="btn btn-primary" value="10" name="btn">Review</button></form>
+    </div>
+    </div>
+    </div>
+
+    <div class="column">
+    <div class="card" style="width: 18rem;" >
+    <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDAzMDJfMzAw%2FMDAxNzA5Mzc2MTcxNjAy.K1ixlC4rR3Ao_VyFkLVPxL9LMSMR0vwq8GdT7lF_e-0g.ejYdt8gVHIDMKTI0VC9gpKQyfWqSYH4quxndabddm8gg.JPEG%2F080F813A-7308-4FD5-8138-25761309D9AA.jpeg%3Ftype%3Dw1500_60_sharpen
+    " style="min-height: 21em;" class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title">고부시</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <form action="/" method="post"><button type="submit" class="btn btn-primary" value="11" name="btn">Review</button></form>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
     </div>
     
     <div class="footer">
     <p>@COPYRIGHT for SJCL</p>
+    
     </div>
 </body>
 </html>
