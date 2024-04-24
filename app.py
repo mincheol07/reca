@@ -92,3 +92,12 @@ def register():
         return render_template("register.html")
 
 
+
+
+@app.route("/review", methods = ["GET", "POST"])
+def review():
+    review_input = request.form.get("review_input")
+    rating = request.form.get("rating")
+    
+    
+    return render_template("review.html")
