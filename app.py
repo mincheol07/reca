@@ -49,10 +49,9 @@ def login():
         rows = db.execute(
             "SELECT * FROM user WHERE user_id = ?", request.form.get("user_id")
         )
-
         # 해시 확인해서 맞으면 로그인 ㄱㄱ
         if len(rows) != 1 or not check_password_hash(
-            rows[0]["hash"], request.form.get("password")
+            rows[0]["password"], request.form.get("password")
         ):
             return render_template("error.html")
 
