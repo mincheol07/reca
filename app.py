@@ -93,3 +93,8 @@ def register():
 
 
 
+
+@app.route("/review", methods = ["GET", "POST"])
+def review():
+    
+    return render_template("review.html")
