@@ -52,41 +52,55 @@
         top: 0;
         width: 100%; 
     }
+.navbar-brand.blue
+{
+    color: #537fbe;
+}
+.navbar-brand.red
+{
+    color: #ea433b;
+}
+.navbar-brand.yellow
+{
+    color: #f5b82e;
+}
+.navbar-brand.green
+{
+    color: #2e944b;
+}
+
     }
         </style>
     </head>
     
     <body>
-      <div class="header">
-        <img src="web_logo.png" alt="" style="text-align: left;" width="120px" height="120px">
-         <ul style="text-align: right;"><a href=""></a>로그인</ul>
-         <ul style="text-align: right;"><a href=""></a>회원가입</ul>
-    </div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: aquamarine;"> 
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">학슐랭</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavdarkDropdown" aria-controls="navbarNavdarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavdarkDropdown">
-                <ul class="navbar-nav">
-                  <li class="nav-item dropdown">
-                    <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                    <li>
-                      <input type="text" name="" id="" type="search" style="text-align: right;"><button>search</button>
-                    </li>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+    <nav class="bg-light border navbar navbar-expand-md navbar-light">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="/"><span class="blue">Hank</span><span class="red">Su</span><span class="yellow">ll</span><span class="green">le</span><span class="red">nG</span></a>
+          <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <img src="web_logo.png" alt="" style="text-align: left;" width="70px" height="70px">
+          <div class="collapse navbar-collapse" id="navbar">
+              {% if session["user_id"] %}
+                  <ul class="navbar-nav me-auto mt-2">
+                      <li class="nav-item"><a class="nav-link" href="/quote">Quote</a></li>
+                      <li class="nav-item"><a class="nav-link" href="/buy">Buy</a></li>
+                      <li class="nav-item"><a class="nav-link" href="/sell">Sell</a></li>
+                      <li class="nav-item"><a class="nav-link" href="/history">History</a></li>
+                  </ul>
+                  <ul class="navbar-nav ms-auto mt-2">
+                      <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
+                  </ul>
+              {% else %}
+                  <ul class="navbar-nav ms-auto mt-2">
+                      <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+                      <li class="nav-item"><a class="nav-link" href="/login">Log In</a></li>
+                  </ul>
+              {% endif %}
+          </div>
+      </div>
+  </nav>
     
           <div class="container">
             <div class="section">
@@ -137,7 +151,7 @@
 
                   <div class="column">
                     <div class="card" style="width: 18rem;">
-                      <img src="../picture/소유라멘.jpg" class="card-img-top" alt="...">
+                      <img src="../picture/시오라멘.jpg" class="card-img-top" alt="...">
                       <div class="card-body">
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
