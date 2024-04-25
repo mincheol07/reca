@@ -46,6 +46,16 @@ body {
     width: 500px;
 }
 
+.review2 {
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+
+    height: auto;
+    width: 1700px;
+}
+
 .box {
     
 }

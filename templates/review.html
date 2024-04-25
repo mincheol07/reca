@@ -15,7 +15,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     
-    
     <style>
 
     #jaebal {
@@ -23,14 +22,29 @@
       justify-content: center;
     }
 
+    #go_rv {
+      margin-top: 10px;
+      background:rgb(108, 167, 209);
+      top:50%;
+      color: #fff;
+      border:none;
+      border-radius:10px;
+      
+    }
+
     #my_store {
       margin-top: 10px;
       background:rgb(218, 144, 237);
+      top:50%;
+      color: #fff;
+      border:none;
+      border-radius:10px;
     }
     
     .star-rating {
       border:solid 2px #ffffff;
       display:flex;
+      justify-content: center;
       flex-direction: row-reverse;
       font-size:2.5em;
       justify-content:space-around;
@@ -74,9 +88,9 @@
   
       .btn_review {
       display:block;
-      width: 400px;
+      width: 800px;
       font-weight: bold;
-      float: left;
+      align-items: center;
       border: 0;
       border-radius: 10px;
       max-height: 50px;
@@ -157,10 +171,20 @@
             <P>서울 강남구 봉은사로4길 36 운현빌딩 1층 2호 호미호식</P>
           </div>
         </div>
+
+
+        <div class="make_space" style="padding-bottom: 80px;">
+          <form action="">
+
+          <button type="submit" value="즐겨찾기" id="my_store">즐겨찾기</button>
+          <button type="submit" value="리뷰 등록" id ="go_rv">리뷰 보러가기</button>
+
+          </form>
+        </div>
         
         <div class="section" id = "jaebal">
 
-          <div class = review> 
+          <div class = review2> 
             <form action="POST">
               <div class="star-rating">
                   <input type="radio" id="5-stars" name="rating" value="5" />
@@ -178,8 +202,7 @@
                 <input class="review_box" placeholder="리뷰 내용을 작성해주세요."></input>
               
                 <button type="submit" class="btn_review" value="리뷰 등록">리뷰 등록하기</button>
-                <button type="submit" class="btn_bookmark" value="즐겨찾기" id="my_store">즐겨찾기</button>
-                <button type="submit" class="btn_viewreview" value="리뷰 등록">리뷰 보러가기</button>
+                
             </form>  
           </div>
 
