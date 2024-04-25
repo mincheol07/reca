@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="/static/styles.css" rel="stylesheet">
+
+
     
     <title>리뷰작성</title>
 
@@ -11,146 +15,111 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     
-    
-    <style>
-    .star-rating {
-    border:solid 2px #ffffff;
-    display:flex;
-    flex-direction: row-reverse;
-    font-size:2.5em;
-    justify-content:space-around;
-    padding:0 .2em;
-    text-align:center;
-    width:5em;
-    }
-
-    .star-rating input {
-    display:none;
-    }
-
-    .star-rating label {
-    color:#ccc;
-    cursor:pointer;
-    }
-
-    .star-rating :checked ~ label {
-    color:#f90;
-    }
-
-    .star-rating label:hover,
-    .star-rating label:hover ~ label {
-    color:#fc0;
-    }
-
-    /* explanation */
-
-    article {
-    background-color:#ffe;
-    box-shadow:0 0 1em 1px rgb(255, 255, 255);
-    color:#006;
-    font-family:cursive;
-    font-style:italic;
-    margin:4em;
-    max-width:30em;
-    padding:2em;
-    }
-
-    .btn_review {
-    display:block;
-    width: 400px;
-    font-weight: bold;
-    border: 0;
-    border-radius: 10px;
-    max-height: 50px;
-    padding: 15px 0;
-    font-size: 1.1em;
-    text-align: center;
-    background:bisque;
-    }
-
-    .review_box {
-    width: 400px;
-    box-sizing: border-box;
-    display: inline-block;
-    margin: 15px 0;
-    background: #F3F4F8;
-    border: 0;
-    border-radius: 10px;
-    height: 100px;
-    resize: none;
-    padding: 15px;
-    font-size: 13px;
-    font-family: sans-serif;
-    }
-    
-    </style>
+  
 </head>
-<div>
+
+<body>
     <div class="header">
         <img src="web_logo.png" alt="" style="text-align: left;" width="120px" height="120px">
          <ul style="text-align: right;"><a href=""></a>OO님, 환영합니다.</ul>
          <ul style="text-align: right;"><a href=""></a>회원가입</ul>
     </div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: aquamarine;"> 
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">학슐랭</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavdarkDropdown" aria-controls="navbarNavdarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavdarkDropdown">
-                <ul class="navbar-nav">
-                  <li class="nav-item dropdown">
-                    <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                    <li>
-                      <input type="text" name="" id="" type="search" style="text-align: right;"><button>search</button>
-                    </li>
-                  </li>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: aquamarine;"> 
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">학슐랭</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavdarkDropdown" aria-controls="navbarNavdarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavdarkDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
-              </div>
-            </div>
-        </nav>
-    </div>
+                <li>
+                  <input type="text" name="" id="" type="search" style="text-align: right;"><button>search</button>
+                </li>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
 
-    <div class="row" style="height: auto; width: 500px; padding-left: 300px; padding-top: 110px; float: left;">
+    <div class="container">
+      
+      <div class="row" style="height: auto; width: 500px; padding-left: 300px; padding-top: 110px; float: left;">
         <div class="column">
-          <div class="card" style="width: 18rem;">
-            <img src="../picture/소유라멘.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
+          <li><h3>소유라멘 학동점</h3>
+          </li>
+          <div class="image" style="width: 18rem;">
+            <img src="../static/소유라멘.jpg" class="card-img-top" alt="...">
+            <!-- <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
+            </div> -->
           </div>
         </div>
-    </div>
+      </div>
 
-    <div class = review style="height: auto; width: 500px; padding-left: 400px; padding-top: 200px; float: left;">
-      
-    <form action="POST">
-      <div class="star-rating">
-          <input type="radio" id="5-stars" name="rating" value="5" />
-          <label for="5-stars" class="star">&#9733;</label>
-          <input type="radio" id="4-stars" name="rating" value="4" />
-          <label for="4-stars" class="star">&#9733;</label>
-          <input type="radio" id="3-stars" name="rating" value="3" />
-          <label for="3-stars" class="star">&#9733;</label>
-          <input type="radio" id="2-stars" name="rating" value="2" />
-          <label for="2-stars" class="star">&#9733;</label>
-          <input type="radio" id="1-star" name="rating" value="1" />
-          <label for="1-star" class="star">&#9733;</label>
-        </div>
-      
-        <input class="review_box" name="review_input" placeholder="리뷰 내용을 작성해주세요." ></input>
-      
-        <button type="submit" class="btn_review" value="리뷰 등록"></button>
-    </form>   
-  </div>
+      <div class = review style="height: auto; width: 500px; padding-left: 400px; padding-top: 200px; float: left;"> 
+        <form action="POST">
+          <div class="star-rating">
+              <input type="radio" id="5-stars" name="rating" value="5" />
+              <label for="5-stars" class="star">&#9733;</label>
+              <input type="radio" id="4-stars" name="rating" value="4" />
+              <label for="4-stars" class="star">&#9733;</label>
+              <input type="radio" id="3-stars" name="rating" value="3" />
+              <label for="3-stars" class="star">&#9733;</label>
+              <input type="radio" id="2-stars" name="rating" value="2" />
+              <label for="2-stars" class="star">&#9733;</label>
+              <input type="radio" id="1-star" name="rating" value="1" />
+              <label for="1-star" class="star">&#9733;</label>
+            </div>
+            
+            <input class="review_box" placeholder="리뷰 내용을 작성해주세요." ></input>
+          
+            <button type="submit" class="btn_review" value="리뷰 등록">리뷰 등록하기</button>
+        </form>  
+      </div>
+    
+      <div>
+        <table style="width: 800px; height: 500px;">
+            <thead>
+                <tr style text-align:left>
+                    <th> 평점: 3.0 / 5 </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> 리뷰 1 </td>
+                </tr>
+                <tr>
+                    <td> 리뷰 2 </td>
+                </tr>
+                <tr>
+                    <td> 리뷰 3 </td>
+                </tr>
+                <tr>
+                    <td> 리뷰 4 </td>
+                </tr>
+                <tr>
+                    <td> 리뷰 5 </td>
+                </tr>
+                <tr>
+                    <td> 리뷰 6 </td>
+                </tr>
+                <tr>
+                    <td> 리뷰 7</td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
 </body>
 </html>
