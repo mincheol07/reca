@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 @charset "utf-8";
 
+=======
+>>>>>>> master
 body {
     background-color: #fff;
     color: #212529; 
@@ -11,10 +14,19 @@ body {
 }
 
 .container {
+<<<<<<< HEAD
     margin: auto;
     padding: 0 15px;
     text-align: center;
     width: 100%;
+=======
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: left;
+    width: 90%;
+>>>>>>> master
 }
 
 .header {
@@ -37,6 +49,7 @@ body {
     transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
 }
 
+<<<<<<< HEAD
 .review {
     display: inline-block;
 
@@ -53,6 +66,8 @@ body {
     width: 70%;
 }
 
+=======
+>>>>>>> master
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 48px;
@@ -83,8 +98,12 @@ input[type="text"]:hover, input[type="number"]:hover {
 
 table {
     background-color: transparent;
+<<<<<<< HEAD
     margin-left:auto; 
     margin-right:auto;
+=======
+    margin-bottom: 1rem;
+>>>>>>> master
     width: 100%;
 }
 
@@ -98,6 +117,7 @@ tbody tr:nth-of-type(odd) {
     background-color: rgb(179, 208, 255, 0.3)
 }
 
+<<<<<<< HEAD
 .star-rating {
     border:solid 2px #ffffff;
     display:flex;
@@ -168,3 +188,5 @@ tbody tr:nth-of-type(odd) {
     font-family: sans-serif;
     }
     
+=======
+>>>>>>> master
