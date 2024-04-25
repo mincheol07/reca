@@ -17,6 +17,7 @@
     
   
 </head>
+<<<<<<< HEAD
 
 <body>
     <div class="header">
@@ -49,6 +50,37 @@
           </div>
         </div>
     </nav>
+=======
+<div>
+    <nav class="bg-light border navbar navbar-expand-md navbar-light">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="/"><span class="blue">Hank</span><span class="red">Su</span><span class="yellow">ll</span><span class="green">le</span><span class="red">nG</span></a>
+          <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <img src="web_logo.png" alt="" style="text-align: left;" width="70px" height="70px">
+          <div class="collapse navbar-collapse" id="navbar">
+              {% if session["user_id"] %}
+                  <ul class="navbar-nav me-auto mt-2">
+                    <li class="nav-item"><a class="nav-link" href="./review">리뷰작성</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./register">신규 회원가입</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./mypage">마이페이지</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./bookmark">북마크</a></li>
+                  </ul>
+                  <ul class="navbar-nav ms-auto mt-2">
+                      <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
+                  </ul>
+              {% else %}
+                  <ul class="navbar-nav ms-auto mt-2">
+                      <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+                      <li class="nav-item"><a class="nav-link" href="/login">Log In</a></li>
+                  </ul>
+              {% endif %}
+          </div>
+      </div>
+  </nav>
+    </div>
+>>>>>>> origin/master
 
     <div class="container">
       
@@ -67,6 +99,7 @@
         </div>
       </div>
 
+<<<<<<< HEAD
       <div class = review style="height: auto; width: 500px; padding-left: 400px; padding-top: 200px; float: left;"> 
         <form action="POST">
           <div class="star-rating">
@@ -121,5 +154,29 @@
         </table>
       </div>
     </div>
+=======
+    <form action="/review" method="post">
+        <div class = review style="height: auto; width: 500px; padding-left: 400px; padding-top: 200px; float: left;">
+        <div class="star-rating">
+            <input type="radio" id="5-stars" name="rating" value="5" />
+            <label for="5-stars" class="star">&#9733;</label>
+            <input type="radio" id="4-stars" name="rating" value="4" />
+            <label for="4-stars" class="star">&#9733;</label>
+            <input type="radio" id="3-stars" name="rating" value="3" />
+            <label for="3-stars" class="star">&#9733;</label>
+            <input type="radio" id="2-stars" name="rating" value="2" />
+            <label for="2-stars" class="star">&#9733;</label>
+            <input type="radio" id="1-star" name="rating" value="1" />
+            <label for="1-star" class="star">&#9733;</label>
+          </div>
+        
+          <input class="review_box" name="review_input" placeholder="리뷰 내용을 작성해주세요." />
+          <button type="submit" class="btn_review" value="리뷰 등록">리뷰 등록</button>
+      </form>   
+
+
+
+      
+>>>>>>> origin/master
 </body>
 </html>
