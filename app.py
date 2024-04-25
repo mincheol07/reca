@@ -26,10 +26,15 @@ def after_request(response):
     response.headers["Pragma"] = "no-cache"
     return response
 
-@app.route("/")
+@app.route("/", methods = ["GET", "POST"])
 def index():
-    return render_template("index.html")
-
+    if request.method == "POST":         
+        a = request.form.get("btn")
+        r_list = db.execute("select * from restaurant where id = ?", a)
+        print(r_list)
+        return render_template("review.html", r_list = r_list)
+    else:
+        return render_template("index.html")
 
 @app.route("/login", methods = ["GET", "POST"])
 def login():
@@ -96,8 +101,10 @@ def register():
 
 @app.route("/review", methods = ["GET", "POST"])
 def review():
-    review_input = request.form.get("review_input")
-    rating = request.form.get("rating")
+    if request.method == "POST":
+        review_input = request.form.get("review_input")
+        rating = request.form.get("rating")
+        print(review_input)
+        print(rating)
     
-    
-    return render_template("review.html")
+        return render_template("review.html")
