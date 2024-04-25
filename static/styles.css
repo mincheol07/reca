@@ -38,7 +38,9 @@ body {
 } */
 
 .review {
-    display: inline-block;
+    /* display: inline-block; */
+
+    align-items: center;
 
     height: auto;
     width: 500px;

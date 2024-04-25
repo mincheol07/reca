@@ -20,6 +20,7 @@
 
     #jaebal {
       display: flex;
+      justify-content: center;
     }
 
     #my_store {
@@ -87,10 +88,9 @@
       }
   
       .review_box {
-      width: 400px;
+      width: 800px;
       box-sizing: border-box;
       /* display: inline-block; */
-      float: left;
       margin: 15px 0;
       background: #F3F4F8;
       border: 0;
@@ -178,47 +178,11 @@
                 <input class="review_box" placeholder="리뷰 내용을 작성해주세요."></input>
               
                 <button type="submit" class="btn_review" value="리뷰 등록">리뷰 등록하기</button>
-                <button type="submit" class="btn_review" value="즐겨찾기" id="my_store">즐겨찾기</button>
+                <button type="submit" class="btn_bookmark" value="즐겨찾기" id="my_store">즐겨찾기</button>
+                <button type="submit" class="btn_viewreview" value="리뷰 등록">리뷰 보러가기</button>
             </form>  
           </div>
 
-          <div class="review" style=" width:630px; height:200px; overflow:auto" >
-            <table style="width: 600px; height: 500px;" >
-                <thead>
-                    <tr>
-                        <th> 평점: 3.0 / 5 </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td> 리뷰 1 </td>
-                    </tr>
-                    <tr>
-                        <td> 리뷰 2 </td>
-                    </tr>
-                    <tr>
-                        <td> 리뷰 3 </td>
-                    </tr>
-                    <tr>
-                        <td> 리뷰 4 </td>
-                    </tr>
-                    <tr>
-                        <td> 리뷰 5 </td>
-                    </tr>
-                    <tr>
-                        <td> 리뷰 6 </td>
-                    </tr>
-                    <tr>
-                        <td> 리뷰 7</td>
-                    </tr>
-                    <tr>
-                      <td> 리뷰 7</td>
-                  </tr>
-                  <tr>
-
-                </tbody>
-            </table>
-          </div>
         </div>
   
   
