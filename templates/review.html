@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="/static/style.css" rel="stylesheet">
+
+
     
     <title>리뷰작성</title>
 
@@ -13,75 +17,6 @@
     
     
     <style>
-    .star-rating {
-    border:solid 2px #ffffff;
-    display:flex;
-    flex-direction: row-reverse;
-    font-size:2.5em;
-    justify-content:space-around;
-    padding:0 .2em;
-    text-align:center;
-    width:5em;
-    }
-
-    .star-rating input {
-    display:none;
-    }
-
-    .star-rating label {
-    color:#ccc;
-    cursor:pointer;
-    }
-
-    .star-rating :checked ~ label {
-    color:#f90;
-    }
-
-    .star-rating label:hover,
-    .star-rating label:hover ~ label {
-    color:#fc0;
-    }
-
-    /* explanation */
-
-    article {
-    background-color:#ffe;
-    box-shadow:0 0 1em 1px rgb(255, 255, 255);
-    color:#006;
-    font-family:cursive;
-    font-style:italic;
-    margin:4em;
-    max-width:30em;
-    padding:2em;
-    }
-
-    .btn_review {
-    display:block;
-    width: 400px;
-    font-weight: bold;
-    border: 0;
-    border-radius: 10px;
-    max-height: 50px;
-    padding: 15px 0;
-    font-size: 1.1em;
-    text-align: center;
-    background:bisque;
-    }
-
-    .review_box {
-    width: 400px;
-    box-sizing: border-box;
-    display: inline-block;
-    margin: 15px 0;
-    background: #F3F4F8;
-    border: 0;
-    border-radius: 10px;
-    height: 100px;
-    resize: none;
-    padding: 15px;
-    font-size: 13px;
-    font-family: sans-serif;
-    }
     
     </style>
 </head>
@@ -118,20 +53,21 @@
         </nav>
     </div>
 
-    <div class="row" style="height: auto; width: 500px; padding-left: 300px; padding-top: 110px; float: left;">
-        <div class="column">
-          <div class="card" style="width: 18rem;">
-            <img src="../picture/소유라멘.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
+    <div class="row" style="height: auto; width: 600px; padding-top: 110px; float: left;" align = "center">
+        <div class="column" style="height: auto; width: 500px;">
+          <h4>소유라멘 학동점</h4>
+          <div class="image" style="width: 18rem;">
+            <img src="../static/소유라멘.jpg" class="card-img-top" alt="...">
+            <!-- <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
+            </div> -->
           </div>
         </div>
     </div>
 
-    <div class = review style="height: auto; width: 500px; padding-left: 400px; padding-top: 200px; float: left;">
+    <div class = review style="height: auto; width: 500px; padding-top: 200px; float: left;" align = "center">
       
     <form action="POST">
       <div class="star-rating">
@@ -149,8 +85,43 @@
       
         <input class="review_box" placeholder="리뷰 내용을 작성해주세요." ></input>
       
-        <button type="submit" class="btn_review" value="리뷰 등록"></button>
-    </form>   
+        <button type="submit" class="btn_review" value="리뷰 등록">리뷰 등록하기</button>
+    </form>  
+    </div>
+    
+    <div style="display: inline-block; padding-top: 200px;" align="center">
+      <table style="width: 800px; height: 500px;" >
+          <thead>
+              <tr style text-align:left>
+                  <th> 평점: 3.0 / 5 </th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td> 리뷰 1 </td>
+              </tr>
+              <tr>
+                  <td> 리뷰 2 </td>
+              </tr>
+              <tr>
+                  <td> 리뷰 3 </td>
+              </tr>
+              <tr>
+                  <td> 리뷰 4 </td>
+              </tr>
+              <tr>
+                  <td> 리뷰 5 </td>
+              </tr>
+              <tr>
+                  <td> 리뷰 6 </td>
+              </tr>
+              <tr>
+                  <td> 리뷰 7</td>
+              </tr>
+          </tbody>
+      </table>
+      </div>
   </div>
-</body>
-</html>
+
+</body    >
+    </html>   
