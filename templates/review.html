@@ -17,6 +17,15 @@
     
     
     <style>
+
+    #jaebal {
+      display: flex;
+    }
+
+    #my_store {
+      margin-top: 10px;
+      background:rgb(218, 144, 237);
+    }
     
     .star-rating {
       border:solid 2px #ffffff;
@@ -25,8 +34,8 @@
       font-size:2.5em;
       justify-content:space-around;
       padding:0 .2em;
-      margin-left: 30px;
-      margin-top: 50px;
+      /* margin-left: 30px; */
+      /* margin-top: 50px; */
       text-align:center;
       width:5em;
       }
@@ -66,13 +75,13 @@
       display:block;
       width: 400px;
       font-weight: bold;
+      float: left;
       border: 0;
       border-radius: 10px;
       max-height: 50px;
       padding: 15px 0;
       font-size: 1.1em;
-      margin-bottom: 80px;
-      margin-left: 30px;
+      /* margin-left: 30px; */
       text-align: center;
       background:bisque;
       }
@@ -80,7 +89,8 @@
       .review_box {
       width: 400px;
       box-sizing: border-box;
-      display: inline-block;
+      /* display: inline-block; */
+      float: left;
       margin: 15px 0;
       background: #F3F4F8;
       border: 0;
@@ -88,7 +98,7 @@
       height: 100px;
       resize: none;
       padding: 15px;
-      margin-right: 190px;
+      /* margin-right: 190px; */
       font-size: 13px;
       font-family: sans-serif;
       
@@ -148,7 +158,7 @@
           </div>
         </div>
         
-        <div class="section">
+        <div class="section" id = "jaebal">
 
           <div class = review> 
             <form action="POST">
@@ -168,6 +178,7 @@
                 <input class="review_box" placeholder="리뷰 내용을 작성해주세요."></input>
               
                 <button type="submit" class="btn_review" value="리뷰 등록">리뷰 등록하기</button>
+                <button type="submit" class="btn_review" value="즐겨찾기" id="my_store">즐겨찾기</button>
             </form>  
           </div>
 
