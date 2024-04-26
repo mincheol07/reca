@@ -4,154 +4,191 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="/static/styles.css" rel="stylesheet">
+
+
     
     <title>리뷰작성</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./style.css">
+    
     
     <style>
-    .star-rating {
-    border:solid 2px #ffffff;
-    display:flex;
-    flex-direction: row-reverse;
-    font-size:2.5em;
-    justify-content:space-around;
-    padding:0 .2em;
-    text-align:center;
-    width:5em;
+
+    #jaebal {
+      display: flex;
+      justify-content: center;
     }
 
-    .star-rating input {
-    display:none;
-    }
-
-    .star-rating label {
-    color:#ccc;
-    cursor:pointer;
-    }
-
-    .star-rating :checked ~ label {
-    color:#f90;
-    }
-
-    .star-rating label:hover,
-    .star-rating label:hover ~ label {
-    color:#fc0;
-    }
-
-    /* explanation */
-
-    article {
-    background-color:#ffe;
-    box-shadow:0 0 1em 1px rgb(255, 255, 255);
-    color:#006;
-    font-family:cursive;
-    font-style:italic;
-    margin:4em;
-    max-width:30em;
-    padding:2em;
-    }
-
-    .btn_review {
-    display:block;
-    width: 400px;
-    font-weight: bold;
-    border: 0;
-    border-radius: 10px;
-    max-height: 50px;
-    padding: 15px 0;
-    font-size: 1.1em;
-    text-align: center;
-    background:bisque;
-    }
-
-    .review_box {
-    width: 400px;
-    box-sizing: border-box;
-    display: inline-block;
-    margin: 15px 0;
-    background: #F3F4F8;
-    border: 0;
-    border-radius: 10px;
-    height: 100px;
-    resize: none;
-    padding: 15px;
-    font-size: 13px;
-    font-family: sans-serif;
+    #my_store {
+      margin-top: 10px;
+      background:rgb(218, 144, 237);
     }
     
+    .star-rating {
+      border:solid 2px #ffffff;
+      display:flex;
+      flex-direction: row-reverse;
+      font-size:2.5em;
+      justify-content:space-around;
+      padding:0 .2em;
+      /* margin-left: 30px; */
+      /* margin-top: 50px; */
+      text-align:center;
+      width:5em;
+      }
+  
+      .star-rating input {
+      display:none;
+      }
+  
+      .star-rating label {
+      color:#ccc;
+      cursor:pointer;
+      }
+  
+      .star-rating :checked ~ label {
+      color:#f90;
+      }
+  
+      .star-rating label:hover,
+      .star-rating label:hover ~ label {
+      color:#fc0;
+      }
+  
+      /* explanation */
+  
+      article {
+      background-color:#ffe;
+      box-shadow:0 0 1em 1px rgb(255, 255, 255);
+      color:#006;
+      font-family:cursive;
+      font-style:italic;
+      margin:4em;
+      max-width:30em;
+      padding:2em;
+      }
+  
+      .btn_review {
+      display:block;
+      width: 400px;
+      font-weight: bold;
+      float: left;
+      border: 0;
+      border-radius: 10px;
+      max-height: 50px;
+      padding: 15px 0;
+      font-size: 1.1em;
+      /* margin-left: 30px; */
+      text-align: center;
+      background:bisque;
+      }
+  
+      .review_box {
+      width: 800px;
+      box-sizing: border-box;
+      /* display: inline-block; */
+      margin: 15px 0;
+      background: #F3F4F8;
+      border: 0;
+      border-radius: 10px;
+      height: 100px;
+      resize: none;
+      padding: 15px;
+      /* margin-right: 190px; */
+      font-size: 13px;
+      font-family: sans-serif;
+      
+      }
+      
     </style>
 </head>
-<div>
-    <nav class="bg-light border navbar navbar-expand-md navbar-light">
-      <div class="container-fluid">
-          <a class="navbar-brand" href="/"><span class="blue">Hank</span><span class="red">Su</span><span class="yellow">ll</span><span class="green">le</span><span class="red">nG</span></a>
-          <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <img src="web_logo.png" alt="" style="text-align: left;" width="70px" height="70px">
-          <div class="collapse navbar-collapse" id="navbar">
-              {% if session["user_id"] %}
-                  <ul class="navbar-nav me-auto mt-2">
-                    <li class="nav-item"><a class="nav-link" href="./review">리뷰작성</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./register">신규 회원가입</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./mypage">마이페이지</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./bookmark">북마크</a></li>
-                  </ul>
-                  <ul class="navbar-nav ms-auto mt-2">
-                      <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
-                  </ul>
-              {% else %}
-                  <ul class="navbar-nav ms-auto mt-2">
-                      <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
-                      <li class="nav-item"><a class="nav-link" href="/login">Log In</a></li>
-                  </ul>
-              {% endif %}
-          </div>
+<body>
+  <div>
+      <nav class="bg-light border navbar navbar-expand-md navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/"><span class="blue">Hank</span><span class="red">Su</span><span class="yellow">ll</span><span class="green">le</span><span class="red">nG</span></a>
+            <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar" data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <img src="web_logo.png" alt="" style="text-align: left;" width="70px" height="70px">
+            <div class="collapse navbar-collapse" id="navbar">
+                {% if session["user_id"] %}
+                    <ul class="navbar-nav me-auto mt-2">
+                      <li class="nav-item"><a class="nav-link" href="./review">리뷰작성</a></li>
+                      <li class="nav-item"><a class="nav-link" href="./register">신규 회원가입</a></li>
+                      <li class="nav-item"><a class="nav-link" href="./mypage">마이페이지</a></li>
+                      <li class="nav-item"><a class="nav-link" href="./bookmark">북마크</a></li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto mt-2">
+                        <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
+                    </ul>
+                {% else %}
+                    <ul class="navbar-nav ms-auto mt-2">
+                        <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/login">Log In</a></li>
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
       </div>
-  </nav>
-    </div>
 
-    <div class="row" style="height: auto; width: 500px; padding-left: 300px; padding-top: 110px; float: left;">
-        <div class="column">
-          <div class="card" style="width: 18rem;">
-            <img src="../picture/소유라멘.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+      <div class="container">
+        <div class="section">
+          <div class="review" style="float: left; padding-top: 80px;" width = "400px", height = "400px" >
+            <div class="column">
+          
+              <div class="image">
+                <img src="../static/소유라멘.jpg" alt="..." width="50%">
+              </div>
             </div>
           </div>
-        </div>
-    </div>
-
-    <form action="/review" method="post">
-        <div class = review style="height: auto; width: 500px; padding-left: 400px; padding-top: 200px; float: left;">
-        <div class="star-rating">
-            <input type="radio" id="5-stars" name="rating" value="5" />
-            <label for="5-stars" class="star">&#9733;</label>
-            <input type="radio" id="4-stars" name="rating" value="4" />
-            <label for="4-stars" class="star">&#9733;</label>
-            <input type="radio" id="3-stars" name="rating" value="3" />
-            <label for="3-stars" class="star">&#9733;</label>
-            <input type="radio" id="2-stars" name="rating" value="2" />
-            <label for="2-stars" class="star">&#9733;</label>
-            <input type="radio" id="1-star" name="rating" value="1" />
-            <label for="1-star" class="star">&#9733;</label>
+          <div class= "store" style="text-align: center; padding-top: 160px;" width = "400px", height = "400px">
+            <h5>소유라멘 학동점 / 일식</h5>
+            <P>서울 강남구 봉은사로4길 36 운현빌딩 1층 2호 호미호식</P>
           </div>
+
+          <div class= "map" style="text-align: center; padding-top: 160px;" width = "500px", height = "500px">
+            <h5>소유라멘 학동점 / 일식</h5>
+            <P>서울 강남구 봉은사로4길 36 운현빌딩 1층 2호 호미호식</P>
+          </div>
+        </div>
         
-          <input class="review_box" name="review_input" placeholder="리뷰 내용을 작성해주세요." />
-          <button type="submit" class="btn_review" value="리뷰 등록">리뷰 등록</button>
-      </form>   
+        <div class="section" id = "jaebal">
 
-<<<<<<< HEAD
-=======
+          <div class = review> 
+            <form action="POST">
+              <div class="star-rating">
+                  <input type="radio" id="5-stars" name="rating" value="5" />
+                  <label for="5-stars" class="star">&#9733;</label>
+                  <input type="radio" id="4-stars" name="rating" value="4" />
+                  <label for="4-stars" class="star">&#9733;</label>
+                  <input type="radio" id="3-stars" name="rating" value="3" />
+                  <label for="3-stars" class="star">&#9733;</label>
+                  <input type="radio" id="2-stars" name="rating" value="2" />
+                  <label for="2-stars" class="star">&#9733;</label>
+                  <input type="radio" id="1-star" name="rating" value="1" />
+                  <label for="1-star" class="star">&#9733;</label>
+                </div>
+    
+                <input class="review_box" placeholder="리뷰 내용을 작성해주세요."></input>
+              
+                <button type="submit" class="btn_review" value="리뷰 등록">리뷰 등록하기</button>
+                <button type="submit" class="btn_bookmark" value="즐겨찾기" id="my_store">즐겨찾기</button>
+                <button type="submit" class="btn_viewreview" value="리뷰 등록">리뷰 보러가기</button>
+            </form>  
+          </div>
 
+        </div>
+  
+  
+      </div>
 
-      
->>>>>>> origin/master
+    
 </body>
 </html>
+
