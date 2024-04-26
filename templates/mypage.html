@@ -107,68 +107,221 @@
 
     <div class="container">
         <div class="section">
-
             <h2>즐겨찾기</h2>
-            <table>
-                <colgroup>
-                    <col width="200px" />
-                    <col width="300px" />
-                    <col width="100px" />
-                </colgroup> 
-                <thead>
-                    <tr>
-                        <th>식당 이름</th>
-                        <th>식당 주소</th>
-                        <th>별점</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td> ex. 써브웨이 </td>
-                        <td> ex. 학원 1층 </td>
-                        <td> ex. 3.0 </td>
-                    </tr>
-
-                    <!-- {% for bookmark in bookmarks %} -->
-                    <tr>
-                        <!-- <td> {{ bookmark.restaurant_id }} </td>
-                        <td> {{ bookmark.restaurant_address }}</td>
-                        <td> {{ bookmark.restaurant_score / 5.0 }} </td> -->
-                    </tr>
-                    <!-- {% endfor %} -->
-                </tbody>
-            </table>
+            <div class="favorites" style="height: 600px; overflow: auto;"> 
+                <table>
+                    <colgroup>
+                        <col width="200px" />
+                        <col width="300px" />
+                        <col width="100px" />
+                    </colgroup> 
+                    <thead>
+                        <tr>
+                            <th>식당 이름</th>
+                            <th>식당 주소</th>
+                            <th>별점</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> ex. 써브웨이 </td>
+                            <td> ex. 학원 1층 </td>
+                            <td> ex. 3.0 </td>
+                        </tr>
+                        
+                        <tr>
+                            <td> ex. 써브웨이 </td>
+                            <td> ex. 학원 1층 </td>
+                            <td> ex. 3.0 </td>
+                        </tr>
+    
+                        <tr>
+                            <td> ex. 써브웨이 </td>
+                            <td> ex. 학원 1층 </td>
+                            <td> ex. 3.0 </td>
+                        </tr>
+                        <tr>
+                            <td> ex. 써브웨이 </td>
+                            <td> ex. 학원 1층 </td>
+                            <td> ex. 3.0 </td>
+                        </tr>
+                        
+                        <tr>
+                            <td> ex. 써브웨이 </td>
+                            <td> ex. 학원 1층 </td>
+                            <td> ex. 3.0 </td>
+                        </tr>
+    
+                        <tr>
+                            <td> ex. 써브웨이 </td>
+                            <td> ex. 학원 1층 </td>
+                            <td> ex. 3.0 </td>
+                        </tr>
+                        <tr>
+                            <td> ex. 써브웨이 </td>
+                            <td> ex. 학원 1층 </td>
+                            <td> ex. 3.0 </td>
+                        </tr>
+                        
+                        <tr>
+                            <td> ex. 써브웨이 </td>
+                            <td> ex. 학원 1층 </td>
+                            <td> ex. 3.0 </td>
+                        </tr>
+    
+                        <tr>
+                            <td> ex. 써브웨이 </td>
+                            <td> ex. 학원 1층 </td>
+                            <td> ex. 3.0 </td>
+                        </tr>
+                        <tr>
+                            <td> ex. 써브웨이 </td>
+                            <td> ex. 학원 1층 </td>
+                            <td> ex. 3.0 </td>
+                        </tr>
+                        
+                        <tr>
+                            <td> ex. 써브웨이 </td>
+                            <td> ex. 학원 1층 </td>
+                            <td> ex. 3.0 </td>
+                        </tr>
+    
+                        <tr>
+                            <td> ex. 써브웨이 </td>
+                            <td> ex. 학원 1층 </td>
+                            <td> ex. 3.0 </td>
+                        </tr>
+                        <tr>
+                            <td> ex. 써브웨이 </td>
+                            <td> ex. 학원 1층 </td>
+                            <td> ex. 3.0 </td>
+                        </tr>
+                        
+                        <tr>
+                            <td> ex. 써브웨이 </td>
+                            <td> ex. 학원 1층 </td>
+                            <td> ex. 3.0 </td>
+                        </tr>
+    
+                        <tr>
+                            <td> ex. 써브웨이 </td>
+                            <td> ex. 학원 1층 </td>
+                            <td> ex. 3.0 </td>
+                        </tr>
+                        <tr>
+                            <td> ex. 써브웨이 </td>
+                            <td> ex. 학원 1층 </td>
+                            <td> ex. 3.0 </td>
+                        </tr>
+                        
+                        <tr>
+                            <td> ex. 써브웨이 </td>
+                            <td> ex. 학원 1층 </td>
+                            <td> ex. 3.0 </td>
+                        </tr>
+    
+                        <tr>
+                            <td> ex. 써브웨이 </td>
+                            <td> ex. 학원 1층 </td>
+                            <td> ex. 3.0 </td>
+                        </tr>
+                        <!-- {% for bookmark in bookmarks %} -->
+                        <tr>
+                            <!-- <td> {{ bookmark.restaurant_id }} </td>
+                            <td> {{ bookmark.restaurant_address }}</td>
+                            <td> {{ bookmark.restaurant_score / 5.0 }} </td> -->
+                        </tr>
+                        <!-- {% endfor %} -->
+                    </tbody>
+                </table>
+            </div>
+            
+            
+        </div>
+        
+        <div class="section" style="text-align: right;"> 
+            <form action="#">
+                <button type="button">나 버튼</button>
+            </form>
         </div>
 
-        <div class="section">
-
+        <!-- <div class="section" style="padding-top: 100px;">
             <h2>내가 쓴 리뷰</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>리뷰내용</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td> ex. 좋아요.. 나빠요... </td>
-                    </tr>
+            <div class="reviews" style="height: 500px; overflow: auto;"> 
+                <table>
+                    <thead>
+                        <tr>
+                            <th>리뷰내용</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> ex. 좋아요.. 나빠요... </td>
+                        </tr>
+                        <tr>
+                            <td> ex. 좋아요.. 나빠요... </td>
+                        </tr>
+                        <tr>
+                            <td> ex. 좋아요.. 나빠요... </td>
+                        </tr>
+                        <tr>
+                            <td> ex. 좋아요.. 나빠요... </td>
+                        </tr>
+                        <tr>
+                            <td> ex. 좋아요.. 나빠요... </td>
+                        </tr>
+                        <tr>
+                            <td> ex. 좋아요.. 나빠요... </td>
+                        </tr>
+                        <tr>
+                            <td> ex. 좋아요.. 나빠요... </td>
+                        </tr>
+                        <tr>
+                            <td> ex. 좋아요.. 나빠요... </td>
+                        </tr>
+                        <tr>
+                            <td> ex. 좋아요.. 나빠요... </td>
+                        </tr>
+                        <tr>
+                            <td> ex. 좋아요.. 나빠요... </td>
+                        </tr>
+                        <tr>
+                            <td> ex. 좋아요.. 나빠요... </td>
+                        </tr>
+                        <tr>
+                            <td> ex. 좋아요.. 나빠요... </td>
+                        </tr>
+                        <tr>
+                            <td> ex. 좋아요.. 나빠요... </td>
+                        </tr>
+                        <tr>
+                            <td> ex. 좋아요.. 나빠요... </td>
+                        </tr>
+                        <tr>
+                            <td> ex. 좋아요.. 나빠요... </td>
+                        </tr>
+                        <tr>
+                            <td> ex. 좋아요.. 나빠요... </td>
+                        </tr>
+                        <tr>
+                            <td> ex. 좋아요.. 나빠요... </td>
+                        </tr>
+                        <tr>
+                            <td> ex. 좋아요.. 나빠요... </td>
+                        </tr>
 
-                    <!-- DB에서 가져온 본인 리뷰들을 보여주기 -->
-                    <!-- 위의 주석을 해제해서 사용해주시면 될거 같습니다 
-                         에러 발생을 막기위해 주석을 사용하였습니다 -->
+                        DB에서 가져온 본인 리뷰들을 보여주기
+                        위의 주석을 해제해서 사용해주시면 될거 같습니다 
+                            에러 발생을 막기위해 주석을 사용하였습니다
 
-                    <!-- {% for review in reviews %}
-                    <tr>
-                        <td> {{ review }} </td>
-                    </tr>
-                    {% endfor %} -->
-                </tbody>
-            </table>
-        </div>
+                         {% for review in reviews %}
+                        <tr>
+                            <td> {{ review }} </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+        </div> -->
     </div>
 </body>
 </html>
-
-
-<!-- <td> {{ birthday.month }}/{{ birthday.day }} </td> -->
